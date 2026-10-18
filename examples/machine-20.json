@@ -1,0 +1,529 @@
+{
+  "version": 4,
+  "language": "zh",
+  "layerHeight": 8,
+  "noteInterval": 1,
+  "timing": "resample",
+  "rangePolicy": "transpose",
+  "useStackable": true,
+  "removeEmptyChests": true,
+  "target": "26.1",
+  "discs": [
+    "minecraft:music_disc_13",
+    "minecraft:music_disc_cat",
+    "minecraft:music_disc_blocks",
+    "minecraft:music_disc_chirp",
+    "minecraft:music_disc_far",
+    "minecraft:music_disc_mall",
+    "minecraft:music_disc_mellohi",
+    "minecraft:music_disc_stal",
+    "minecraft:music_disc_strad",
+    "minecraft:music_disc_ward",
+    "minecraft:music_disc_11",
+    "minecraft:music_disc_wait",
+    "minecraft:music_disc_pigstep",
+    "minecraft:music_disc_otherside",
+    "minecraft:music_disc_5"
+  ],
+  "fillers": [
+    "minecraft:white_carpet",
+    "minecraft:light_gray_carpet",
+    "minecraft:gray_carpet",
+    "minecraft:black_carpet",
+    "minecraft:brown_carpet",
+    "minecraft:red_carpet",
+    "minecraft:orange_carpet",
+    "minecraft:yellow_carpet",
+    "minecraft:lime_carpet",
+    "minecraft:green_carpet",
+    "minecraft:cyan_carpet",
+    "minecraft:light_blue_carpet",
+    "minecraft:blue_carpet",
+    "minecraft:purple_carpet",
+    "minecraft:magenta_carpet",
+    "minecraft:pink_carpet"
+  ],
+  "restItem": "minecraft:shears",
+  "tracks": [
+    {
+      "id": "instrument_0",
+      "name": "钢琴",
+      "sourceIds": [
+        0
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 24,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 24,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_1",
+      "name": "贝斯",
+      "sourceIds": [
+        1
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 16,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 16,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_2",
+      "name": "底鼓",
+      "sourceIds": [
+        2
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 8,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_3",
+      "name": "军鼓",
+      "sourceIds": [
+        3
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_4",
+      "name": "踩镲",
+      "sourceIds": [
+        4
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 56,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 56,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_5",
+      "name": "吉他",
+      "sourceIds": [
+        5
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 48,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 48,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_6",
+      "name": "长笛",
+      "sourceIds": [
+        6
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 40,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 40,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_7",
+      "name": "铃铛",
+      "sourceIds": [
+        7
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 32,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 32,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_8",
+      "name": "风铃",
+      "sourceIds": [
+        8
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 24,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 24,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_9",
+      "name": "木琴",
+      "sourceIds": [
+        9
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 16,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 16,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_10",
+      "name": "铁木琴",
+      "sourceIds": [
+        10
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 8,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 8,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_11",
+      "name": "牛铃",
+      "sourceIds": [
+        11
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_12",
+      "name": "迪吉里杜管",
+      "sourceIds": [
+        12
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 56,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 56,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_13",
+      "name": "芯片",
+      "sourceIds": [
+        13
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 48,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 48,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_14",
+      "name": "班卓琴",
+      "sourceIds": [
+        14
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 40,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 40,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_15",
+      "name": "电子钢琴",
+      "sourceIds": [
+        15
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 32,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 32,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_16",
+      "name": "小号",
+      "sourceIds": [
+        16
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 64,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 64,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_17",
+      "name": "斑驳小号",
+      "sourceIds": [
+        17
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 64,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 64,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    },
+    {
+      "id": "instrument_18",
+      "name": "锈蚀小号",
+      "sourceIds": [
+        18
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 72,
+          "z": -1,
+          "direction": "west"
+        },
+        {
+          "x": 1,
+          "y": 72,
+          "z": 0,
+          "direction": "north"
+        }
+      ]
+    },
+    {
+      "id": "instrument_19",
+      "name": "氧化小号",
+      "sourceIds": [
+        19
+      ],
+      "keyOffset": 0,
+      "sound": "",
+      "enabled": true,
+      "modules": [
+        {
+          "x": 0,
+          "y": 72,
+          "z": 1,
+          "direction": "east"
+        },
+        {
+          "x": -1,
+          "y": 72,
+          "z": 0,
+          "direction": "south"
+        }
+      ]
+    }
+  ]
+}

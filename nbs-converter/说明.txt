@@ -1,0 +1,9 @@
+需要python
+安装pynbs 和 mcschematic两个库
+
+constants.py 有些可修改的设置
+nbs_converter.py 转换nbs生成worldedit原理图
+nbs_format_song.py 格式化nbs文件（移除非原版的音等）
+
+credit: 
+https://github.com/jazziiRed/nbs-converter

@@ -1,0 +1,13 @@
+{
+  "name": "encoded-redstone-music",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "convert": "node scripts/convert.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

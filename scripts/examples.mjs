@@ -1,0 +1,11 @@
+import { writeFile } from 'node:fs/promises';
+import { defaultConfig } from '../src/config.js';
+import { demoSong } from '../src/demo.js';
+import { writeNbs } from '../src/nbs.js';
+import { compileSong } from '../src/encoder.js';
+import { exportLitematic } from '../src/litematic.js';
+for (const count of [16, 20]) await writeFile(new URL(`../examples/machine-${count}.json`, import.meta.url), JSON.stringify(defaultConfig(count), null, 2) + '\n');
+const config = defaultConfig(), song = demoSong();
+await writeFile(new URL('../examples/copper-echoes.nbs', import.meta.url), writeNbs(song));
+await writeFile(new URL('../examples/copper-echoes.litematic', import.meta.url), await exportLitematic(compileSong(song, config), config, song.header.name));
+console.log('已生成示例 NBS、投影与 16/20 乐器配置。');

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Responsive layout checks</title>
+<style>body{background:#101714;color:#dce5d8;font:14px system-ui;margin:20px}button{padding:10px 20px}table{border-collapse:collapse;margin:20px 0}td,th{padding:6px 14px;border:1px solid #435543}iframe{border:1px solid #52713e;height:1000px;display:block}#summary{color:#c2e798}</style></head>
+<body><h1>Responsive layout checks</h1><p>Checks the actual editor in an iframe at each CSS width, in both languages and speeds. No conversion or in-game validation is performed.</p><button id="run">Run checks</button><p id="summary">Ready</p><table><thead><tr><th>Width</th><th>Language</th><th>TPS</th><th>Result</th></tr></thead><tbody id="results"></tbody></table><iframe id="preview" title="Editor under test"></iframe>
+<script type="module">
+const frame=document.querySelector('#preview'), output=document.querySelector('#results'), summary=document.querySelector('#summary');
+const widths=[360,560,760,761,900,1080,1081,1140,1280,1440,1920];
+const settle=()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+document.querySelector('#run').onclick=async()=>{
+  document.querySelector('#run').disabled=true; output.replaceChildren(); let passed=0;
+  try {
+    for(const language of ['zh','en']) for(const width of widths) for(const interval of [1,2]){
+      frame.style.width=width+'px';
+      await new Promise((resolve,reject)=>{frame.onload=resolve;frame.onerror=reject;frame.src='../index.html?transient=1&responsive='+width+'&language='+language;});
+      const doc=frame.contentDocument, win=frame.contentWindow;
+      doc.querySelector('#language').value=language;doc.querySelector('#language').dispatchEvent(new win.Event('change',{bubbles:true}));
+      doc.querySelector('#interval').value=interval;doc.querySelector('#interval').dispatchEvent(new win.Event('input',{bubbles:true}));
+      doc.querySelector('[data-tab="layout"]').click(); doc.querySelector('#preset20').click(); await settle();
+      const editor=doc.querySelector('.editor').getBoundingClientRect(),side=doc.querySelector('.sidebar').getBoundingClientRect();
+      const cards=[...doc.querySelectorAll('#panel-layout>.card')].map(e=>e.getBoundingClientRect());
+      const noOverlap=side.left>=editor.right-1 || side.top>=editor.bottom-1;
+      const contained=cards.every(c=>c.right<=editor.right+1 && c.left>=editor.left-1);
+      const noPageOverflow=doc.documentElement.scrollWidth<=win.innerWidth+1;
+      const languageCorrect=doc.documentElement.lang===(language==='en'?'en':'zh-CN');
+      const expectedModules=interval===1?40:20;
+      const moduleRows=doc.querySelectorAll('#module-placements tr').length===expectedModules;
+      const listRows=[...doc.querySelectorAll('#module-placements tr')];
+      const instrumentOrder=listRows.slice(0,4).map(e=>e.dataset.trackId).join(',')===(interval===1?'instrument_0,instrument_0,instrument_1,instrument_1':'instrument_0,instrument_1,instrument_2,instrument_3');
+      const readOnlyCoordinates=doc.querySelectorAll('#module-placements input[readonly]').length===expectedModules*3;
+      const defaultPositions=listRows[0].querySelector('select').value==='west'&&listRows[0].querySelector('input').value==='4'&&listRows[1].querySelector('select').value===(interval===1?'north':'west');
+      const fixedNames=doc.querySelectorAll('#tracks input[type=text]').length===20;
+      const blockIcons=[...doc.querySelectorAll('#tracks .block-icon')];
+      await Promise.all(blockIcons.map(image=>image.decode().catch(()=>{})));
+      const iconsLoaded=blockIcons.length===20&&blockIcons.every(image=>image.naturalWidth>0);
+      doc.querySelector('[data-tab="coding"]').click(); await settle();
+      const usageVisible=doc.querySelectorAll('.disc-usage-item').length===15&&!doc.querySelector('#sounds-file');
+      const usageContained=doc.querySelector('#usage-card').getBoundingClientRect().right<=editor.right+1&&doc.documentElement.scrollWidth<=win.innerWidth+1;
+      const ok=noOverlap&&contained&&noPageOverflow&&languageCorrect&&moduleRows&&instrumentOrder&&readOnlyCoordinates&&defaultPositions&&fixedNames&&iconsLoaded&&usageVisible&&usageContained; if(ok)passed++;
+      const row=document.createElement('tr');for(const text of [width,language,20/interval,ok?'PASS':JSON.stringify({noOverlap,contained,noPageOverflow,languageCorrect,moduleRows,instrumentOrder,readOnlyCoordinates,defaultPositions,fixedNames,iconsLoaded,usageVisible,usageContained})]){const cell=document.createElement('td');cell.textContent=text;row.append(cell);}output.append(row);
+      summary.textContent=passed+' / '+output.children.length+' passed';
+    }
+    summary.textContent=passed+' / '+widths.length*4+' passed — complete';
+  }catch(e){summary.textContent='ERROR: '+e.message;}
+  finally{document.querySelector('#run').disabled=false;}
+};
+</script></body></html>
