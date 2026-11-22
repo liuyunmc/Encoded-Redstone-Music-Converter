@@ -1,6 +1,6 @@
 # 唱片工坊 · Encoded Redstone Music
 
-[English](README.en.md) · [红石音乐机视频（Bilibili）](https://www.bilibili.com/video/BV1aqA4zXE7U/)
+[在线使用](https://liuyunmc.github.io/Encoded-Redstone-Music-Converter/) · [English](README.en.md) · [红石音乐机视频（Bilibili）](https://www.bilibili.com/video/BV1aqA4zXE7U/)
 
 将 NBS 乐曲转换为红石音乐机使用的编码唱片，自动装入潜影盒与双箱，导出包含箱内物品的 `.litematic` 投影。支持 GitHub Pages 网页使用，也可在电脑上启动本地 GUI；乐曲与配置均在浏览器本机处理。
 
