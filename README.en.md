@@ -1,6 +1,6 @@
 # Disc Workshop · Encoded Redstone Music
 
-[中文](README.md) · [Redstone music machine video (Bilibili, Chinese)](https://www.bilibili.com/video/BV1aqA4zXE7U/)
+[Open converter](https://liuyunmc.github.io/Encoded-Redstone-Music-Converter/) · [中文](README.md) · [Redstone music machine video (Bilibili, Chinese)](https://www.bilibili.com/video/BV1aqA4zXE7U/)
 
 Convert NBS songs into encoded music discs for a redstone music machine, pack them into shulker boxes and double chests, and export a `.litematic` schematic containing the inventories. Use the web GUI on GitHub Pages or run it locally. Songs and settings are processed in your browser.
 
